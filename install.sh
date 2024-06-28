@@ -60,7 +60,7 @@ install_server() {
 
     chmod +x /usr/lib/terraria/TerrariaServer && chmod +x /usr/lib/terraria/TerrariaServer.bin.x86_64
     echo "SUCCESSFULL INSTALATION OF SERVER"
-}q
+}
 
 create_dirs() {
     echo "CREATING DIRECTORIES"
