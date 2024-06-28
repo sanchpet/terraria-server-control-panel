@@ -38,7 +38,7 @@ main() {
 
 	if [ "${status}" -eq 0 ]
 	then
-		append_tabbed "Players|$(sudo -u terraria terrariaad playing; tail -n2 /usr/lib/terraria/log/terraria.log | head -n1 | cat -v | tr -d "^M" | grep -v "exit")" 2 "|"
+		append_tabbed "Players|$(sudo -u terraria /usr/lib/terraria/scripts/terrariaad.sh playing; tail -n2 /usr/lib/terraria/log/terraria.log | head -n1 | cat -v | tr -d "^M" | grep -v "exit")" 2 "|"
 	fi
 
 	endwin
@@ -93,7 +93,7 @@ update() {
 			if [ "${status}" -eq 0 ];
 			then
 				clear
-				sudo -u terraria terrariaad attach
+				sudo -u terraria /usr/lib/terraria/scripts/terrariaad.sh attach
 			fi
 		;;
 		5)

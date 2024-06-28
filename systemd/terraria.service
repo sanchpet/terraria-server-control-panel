@@ -19,8 +19,8 @@ PrivateTmp=true
 InaccessibleDirectories=/root /sys /srv -/opt /media -/lost+found
 ReadWriteDirectories=/usr/lib/terraria /usr/share/terraria /home/terraria
 WorkingDirectory=/usr/lib/terraria/
-ExecStart=/usr/local/bin/terrariaad start
-ExecStop=/usr/local/bin/terrariaad exit
+ExecStart=/usr/lib/terraria/scripts/terrariaad.sh start
+ExecStop=/usr/lib/terraria/scripts/terrariaad.sh exit
 
 [Install]
 WantedBy=multi-user.target

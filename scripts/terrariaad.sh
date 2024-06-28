@@ -2,7 +2,7 @@
 
 set -Eeuo pipefail
 
-send="`printf \"$*\r\"`"
+send="$(printf \"$*\r\")"
 attach="screen -r Terraria"
 inject="screen -S Terraria -X stuff $send"
 
