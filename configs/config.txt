@@ -1,0 +1,84 @@
+#Файл содержит параметры конфигурации сервера Terraria
+#При возникновении ошибок, пожалуйста, направьте обращение в службу поддержки хостинга. 
+
+#Знак # перед строкой обозначает комментарий.
+
+#Загрузить мир из файла:
+# - Не меняйте этот путь, чтобы продолжать играть в том же мире;
+# - Для создания нового мира достаточно изменить имя файла world.wld;
+# - Если вы хотите загрузить существующий мир, разместите его в папке;
+# /usr/share/terraria/Worlds/ и замените world.wld на имя вашего файла.
+world=/usr/share/terraria/Worlds/world.wld
+
+#Папка для хранения файлов миров.
+# - Для корректной работы сервера не рекомендуется менять этот параметр.
+worldpath=/usr/share/terraria/Worlds/
+
+#Создать новый мир, если его ещё нет. 
+#Размер мира определяется так: 1(маленький), 2(средний), and 3(большой).
+autocreate=2
+
+#Seed мира для автосоздания
+seed=
+
+#Имя мира для автосоздания
+worldname=Terraria
+
+#Сложность мира для автосоздания 0(классика), 1(эксперт), 2(мастер), 3(приключение)
+difficulty=0
+
+#Максимальное число игроков на сервере.  
+#Должно быть между 1 и 255
+maxplayers=10
+
+#Порт для сервера. 
+#Для смены порта вам потребуется также изменить настройки iptables.
+port=7777
+
+#Пароль мира
+password=
+
+#Сообщение дня (MOTD)
+motd=Please don’t cut the purple trees!
+
+#Расположение банлиста. По умолчанию сохраняется в рабочей директории сервера.
+# - Для корректной работы консоли не рекомендуем менять данный параметр.
+banlist=banlist.txt
+
+#Включить защиту от читов. 0 - выключить.
+secure=1
+
+#Язык сервера по коду языка:
+#English = en-US, German = de-DE, Italian = it-IT, French = fr-FR, Spanish = es-ES, Russian = ru-RU, Chinese = zh-Hans, Portuguese = pt-BR, Polish = pl-PL,
+language=ru-RU
+
+#Автоматически включить uPNP.
+#Данный параметр не требуется для сервера с публичным IP-адресом.
+upnp=0
+
+#Повышает частоту обновления поведения NPC и увеличивает использование сети. 
+#Чем меньше значние, тем активнее NPC, но по сети отправляется больше данных. 
+#0 - максимальное значение потребления сетевого канала.
+npcstream=10
+
+#Системный приоритет:
+#0:Realtime, 1:High, 2:AboveNormal, 3:Normal, 4:BelowNormal, 5:Idle
+priority=1
+
+#Разрешения на способности в режиме приключения.
+#0: Закрыто всем, 1: Меняется только хостом, 2: Меняется кем угодно
+#journeypermission_time_setfrozen=2
+#journeypermission_time_setdawn=2
+#journeypermission_time_setnoon=2
+#journeypermission_time_setdusk=2
+#journeypermission_time_setmidnight=2
+#journeypermission_godmode=2
+#journeypermission_wind_setstrength=2
+#journeypermission_rain_setstrength=2
+#journeypermission_time_setspeed=2
+#journeypermission_rain_setfrozen=2
+#journeypermission_wind_setfrozen=2
+#journeypermission_increaseplacementrange=2
+#journeypermission_setdifficulty=2
+#journeypermission_biomespread_setfrozen=2
+#journeypermission_setspawnrate=2
