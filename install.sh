@@ -55,7 +55,7 @@ install_server() {
     latest_ver=$(jq < "$script_dir"/version.json | grep -Eo "terraria-server-.*.zip" | uniq )
     ver_num=$(echo "$latest_ver" | sed 's/terraria-server-//; s/.zip//')
 
-    wget https://terraria.org/api/download/pc-dedicated-server/"$latest_ver"
+    wget https://terraria.org/api/download/pc-dedicated-server/"$latest_ver" -P "$script_dir"/
     unzip "$latest_ver" && mv "$ver_num"/Linux /usr/lib/terraria 
 
     chmod +x /usr/lib/terraria/TerrariaServer && chmod +x /usr/lib/terraria/TerrariaServer.bin.x86_64
