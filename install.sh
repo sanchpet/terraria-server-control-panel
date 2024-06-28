@@ -20,8 +20,8 @@ trap cleanup SIGINT SIGTERM ERR EXIT
 cleanup() {
   trap - SIGINT SIGTERM ERR EXIT
   rm -f "$script_dir"/version.json
-  rm -rf "${script_dir:?}"/"$latest_ver"
-  rm "${script_dir:?}"/"$ver_num"
+  rm "${script_dir:?}"/"$latest_ver"
+  rm -rf "${script_dir:?}"/"$ver_num"
 }
 
 setup_colors() {
@@ -45,7 +45,7 @@ die() {
 
 install_dependencies() {
     echo "INSTALLING DEFAULT DEPENDENCIES"
-    apt-get update && apt-get -y install jq unzip pwgen iptables-persistent
+    apt-get update && apt-get -y install jq unzip pwgen
     echo "SUCCESSFULL INSTALATION OF DEPENDENCIES"
 }
 
@@ -78,7 +78,7 @@ install_scripts() {
     cp "$script_dir"/scripts/* /usr/lib/terraria/scripts/
     cp "$script_dir"/configs/* /usr/lib/terraria/
     touch /usr/lib/terraria/banlist.txt
-    chmod +x /usr/local/bin/terrariaad
+    chmod +x usr/lib/terraria/scripts/terrariaad.sh
 
     ln -sv /usr/lib/terraria/config.txt /etc/terraria/config.txt
     ln -sv /usr/lib/terraria/banlist.txt /etc/terraria/banlist.txt
