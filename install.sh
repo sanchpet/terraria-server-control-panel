@@ -64,12 +64,12 @@ install_server() {
 
 create_dirs() {
     echo "CREATING DIRECTORIES"
-    mkdir -p /usr/share/terraria
-    mkdir -p /usr/lib/terraria/proc
-    mkdir -p /home/terraria/
-    mkdir -p /usr/lib/terraria/scripts
-    mkdir -p /etc/terraria
-    mkdir -p /usr/lib/terraria/log
+    mkdir -vp /usr/share/terraria
+    mkdir -vp /usr/lib/terraria/proc
+    mkdir -vp /home/terraria/
+    mkdir -vp /usr/lib/terraria/scripts
+    mkdir -vp /etc/terraria
+    mkdir -vp /usr/lib/terraria/log
     echo "SUCCESSFULL CREATION OF DIRECTORIES"
 }
 
