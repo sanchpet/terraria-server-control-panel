@@ -52,7 +52,7 @@ install_dependencies() {
 install_server() {
     echo "INSTALLING SERVER"
     wget https://terraria.org/api/get/dedicated-servers-names -O "$script_dir"/version.json
-    latest_ver=$(jq < version.json | grep -Eo "terraria-server-.*.zip" | uniq )
+    latest_ver=$(jq < "$script_dir"/version.json | grep -Eo "terraria-server-.*.zip" | uniq )
     ver_num=$(echo "$latest_ver" | sed 's/terraria-server-//; s/.zip//')
 
     wget https://terraria.org/api/download/pc-dedicated-server/"$latest_ver"
