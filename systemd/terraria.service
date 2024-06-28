@@ -1,0 +1,26 @@
+[Unit]
+Description=Terraria Server
+Documentation='https://github.com/sanchpet/terraria-server-control-panel'
+Wants=network.target
+After=network.target
+
+[Service]
+Type=forking
+User=terraria
+Group=terraria
+Nice=5
+KillMode=none
+SuccessExitStatus=0 1
+
+ProtectSystem=full
+PrivateDevices=true
+NoNewPrivileges=true
+PrivateTmp=true
+InaccessibleDirectories=/root /sys /srv -/opt /media -/lost+found
+ReadWriteDirectories=/usr/lib/terraria /usr/share/terraria /home/terraria
+WorkingDirectory=/usr/lib/terraria/
+ExecStart=/usr/local/bin/terrariaad start
+ExecStop=/usr/local/bin/terrariaad exit
+
+[Install]
+WantedBy=multi-user.target

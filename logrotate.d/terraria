@@ -1,0 +1,12 @@
+/usr/lib/terraria/log/terraria.log {
+    weekly
+    rotate 12
+    compress
+    missingok
+    delaycompress
+    notifempty
+    postrotate
+        echo ":" >> /usr/lib/terraria/log/terraria.log
+        chown terraria:terraria /usr/lib/terraria/log/terraria.log
+    endscript
+}

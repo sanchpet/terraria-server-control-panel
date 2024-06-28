@@ -1,0 +1,3 @@
+deflog on
+logfile /usr/lib/terraria/log/terraria.log
+logfile flush 0
