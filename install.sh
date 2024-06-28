@@ -78,7 +78,7 @@ install_scripts() {
     cp "$script_dir"/scripts/* /usr/lib/terraria/scripts/
     cp "$script_dir"/configs/* /usr/lib/terraria/
     touch /usr/lib/terraria/banlist.txt
-    chmod +x usr/lib/terraria/scripts/terrariaad.sh
+    chmod +x /usr/lib/terraria/scripts/terrariaad.sh
 
     ln -sv /usr/lib/terraria/config.txt /etc/terraria/config.txt
     ln -sv /usr/lib/terraria/banlist.txt /etc/terraria/banlist.txt
